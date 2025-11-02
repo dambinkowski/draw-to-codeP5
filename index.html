@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- app title -->
+    <title>Draw-to-Code</title>
+
+    <!-- meta data-->
+    <meta name="description" content="draw to code p5 converter application, doing grafic in p5 using mouse and get p5 ready to paste code">
+    <meta name="keywords" content="p5, converter, sketch, draw, code">
+    <meta name="author" content="UOL student :)">
+    <!-- p5 library -->
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.dom.js"></script>
+
+    <!-- main script -->
+    <script src="scripts/sketch.js"></script>
+
+    <!-- scripts -->
+    <script src="scripts/toolbox.js"></script>
+    <script src="scripts/helperFunctions.js"></script> <!-- there are other helper functions in that function like: is mouse on canvas, or taking care of option area-->
+    <script src="scripts/codeArea.js"></script>
+
+    <!-- tools -->
+    <script src="tools/freehandTool.js"></script>
+    <script src="tools/lineToTool.js"></script>
+    <script src="tools/rectangleTool.js"></script>
+    <script src="tools/ellipseTool.js"></script>
+    <script src="tools/sprayCanTool.js"></script>
+    <script src="tools/StampTool.js"></script>
+    <script src="tools/vertexTool.js"></script>
+    <script src="tools/mirrorDrawTool.js"></script>
+
+    <!-- link to style sheet -->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+  </head>
+
+  <body>
+  	<div class="wrapper"> <!-- wraper is taking over whole screen -->
+      <div class="box leftHeader header">
+        <button id="clearButton">Clear</button>
+      </div>
+      <div class="midHeader header box">
+        <h1>Draw to Code - p5 converter</h1>
+      </div> <!-- those buttons will be on the right side, buttons name are self-explenatory -->
+      <div class="header box rightHeader">
+        <button class="righSideHeaderButtons" id="saveImageButton">Save Image</button>
+        <button class="righSideHeaderButtons" id="saveToClipboardButton">Clipboard</button>
+        <button class="righSideHeaderButtons" id="saveTextFileButton">.txt</button>
+      </div>
+      <div class="box" id="sidebar"></div> <!-- side bar is the left bar with tool -->
+      <div class="box" id="rightbar"></div> <!-- right bar is the code area -->
+      <div id="content"></div> <!-- this is canvas -->
+      <div id="leftFooter"></div> <!-- x, y mouse coordinates -->
+      <div class="box options"></div> <!-- dynamic tool options change when tool is changed -->
+	</div>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+  font-family: Helvetica, sans-serif;
+}
+
+/* wrapper is a full with and hight app */
+.wrapper {
+	display: grid;
+	height: 100%;
+  grid-template-columns: 70px 2fr 1fr;
+	grid-template-rows: 35px minmax(500px, 4fr) 35px;
+	grid-template-areas:
+             "leftHeader midHeader rightHeader"
+			       "sidebar content rightbar"
+             "leftFooter options options";
+	color: #444;
+}
+.box {
+  background-color: #cac9d6;
+  color: #fff;
+}
+
+/* this is header area */
+.header {
+  background-color: #999;
+}
+
+/* app name middle area of the header */
+.midHeader {
+	grid-area: midHeader;
+}
+h1 { /* app name */
+  text-align: center;
+  margin-top: -3px;
+  /* text shadow copied from
+     https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow
+     date: Aug 12, 2021,
+     author: by MDN contributors
+     only modyfied from 1px to 3px for the look*/
+  text-shadow: 3px 1px 2px pink;
+}
+
+/* left side of header clear buttor */
+.leftHeader {
+  grid-area: leftHeader;
+}
+#clearButton {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+#clearButton:hover {
+  background-color: #999; /* get darken when hover over to show possible interaction */
+}
+
+/* right side for header buttons:save, clipboard, save as txt */
+.rightHeader { /* entire area */
+  grid-area: rightHeader;
+  text-align: center;
+}
+.righSideHeaderButtons { /* each button */
+  margin: auto;
+  float: left;
+  width: 33.3%;
+  height: 100%;
+}
+.righSideHeaderButtons:hover {
+  background-color: #999;
+}
+
+/* tool area side bar on the left*/
+#sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+}
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding: 6px;
+  margin: auto;
+}
+.sideBarItem img{
+	max-height: 50px;
+	max-Width:50px;
+}
+.sideBarItem :hover{
+  transform: scale(1.1);
+}
+
+/* canvas middle area*/
+#content {
+	grid-area: content;
+}
+
+/* code area the right side of middle */
+#rightbar {
+  grid-area: rightbar;
+  overflow-y: scroll;
+  font-family: monospace;
+  color: black;
+}
+
+/* left footer where x, y of mouse are shown */
+#leftFooter {
+  grid-area: leftFooter;
+  background-color: #e0e0e0;
+}
+
+/* opiotns middle and right side of the footer */
+.options{
+	grid-area: options;
+  background-color: #999;
+}
+/* options buttons */
+.optionsButton {
+  height: 100%;
+  margin-left: 10px;
+}
+.optionsButton:hover {
+  background-color: #999;
+}
+
+/* input types of elements like number, siledr*/
+.optionsElement {
+  position: relative;
+  margin-left: 10px;
+}
+.optionsElement:hover {
+  background-color: #737373;
+}
+
+/*styling specific of options of the tools */
+#strokeWeight {
+  height: 15px;
+  width: 35px;
+  margin-top: 10px;
+}
+#borderWeight {
+  width: 35px;
+}
+.sprayCanColor {
+  margin-top: 5px;
+}
+.imgSizeStar {
+  margin-top: 5px;
+}
